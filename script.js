@@ -29,7 +29,7 @@ console.log(sideM);
 
 }
 
-var uR = document.getElementById("upRight").innerHTML
+var uR = document.getElementById("upRight")
 uR.appendChild(sideM);
 
 }
@@ -56,7 +56,7 @@ console.log(sideM);
 }
 
 
-var dR = document.getElementById("upRight").innerHTML
+var dR = document.getElementById("upRight")
 dR.appendChild(sideM);
 }
 
