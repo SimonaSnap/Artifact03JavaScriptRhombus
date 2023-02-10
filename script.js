@@ -17,15 +17,13 @@ for(j=0;j<=i;j++){
 
 //Is the position even or odd so we change the color
 if (j%2)
-//even
-sideM.innerHTML +="<span style='color:" + pColorChoice1 + ";'>" + pSymbol +"</span>";
-else
-//odd
-sideM.innerHTML +="<span style='color:" + pColorChoice2 + ";'>" + pSymbol +"</span>";
-
+if (j%2){
+    sideM.style.color = pColorChoice1;
+    sideM.textContent = pSymbol;
 }
-console.log(sideM);
-
+else {
+    sideM.style.color = pColorChoice2;
+    sideM.textContent = pSymbol
 }
 
 var uR = document.getElementById("upRight")
@@ -36,21 +34,20 @@ uR.append(sideM);
 function downRight(pSideM, pColorChoice1, pColorChoice2, pSymbol){
 var sideM ="";
 for (i=sideM;i > 0;i--){
-sideM = document.createElement("p"); 
+sideM = document.createElement("span"); 
 sideM.textContent = "";
 //Create each line on the Rhombus
 for(j=0;j<i;j++){
 
 //Is the position even or odd so we change the color
-if (j%2)
-//even
-sideM.innerHTML +="<span style='color:" + pColorChoice1 + ";'>" + pSymbol +"</span>";
-else
-//odd
-sideM.innerHTML +="<span style='color:" + pColorChoice2 + ";'>" + pSymbol +"</span>";
-
+if (j%2){
+    sideM.style.color = pColorChoice1;
+    sideM.textContent = pSymbol;
 }
-sideM +="</p>";
+else {
+    sideM.style.color = pColorChoice2;
+    sideM.textContent = pSymbol
+}
 console.log(sideM);
 
 }
