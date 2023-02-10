@@ -1,3 +1,4 @@
+var body = document.body;
 var create = document.createElement("button")
 create.textContent = "Create Rhombus"
 body.appendChild(create);
