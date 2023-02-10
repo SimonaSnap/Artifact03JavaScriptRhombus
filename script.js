@@ -29,7 +29,7 @@ console.log(sideM);
 }
 
 var uR = document.getElementById("upRight")
-uR.appendChild(sideM);
+uR.append(sideM);
 
 }
 
@@ -57,7 +57,7 @@ console.log(sideM);
 
 
 var dR = document.getElementById("upRight")
-dR.appendChild(sideM);
+dR.append(sideM);
 }
 
 create.onclick = function createRhombus(pSideM, pColorChoice1, pColorChoice2, pSymbol) {
