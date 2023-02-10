@@ -33,7 +33,7 @@ function upRight(pSideM, pColorChoice1, pColorChoice2, pSymbol){
 
 function downRight(pSideM, pColorChoice1, pColorChoice2, pSymbol){
     var sideM = document.createElement("span"); 
-    for (i=psideM;i > 0;i--){
+    for (i=pSideM;i > 0;i--){
         //Create each line on the Rhombus
         for(j=0;j<i;j++){
             //Is the position even or odd so we change the color
