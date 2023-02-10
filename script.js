@@ -39,7 +39,7 @@ document.getElementById("upRight").innerHTML = sideM;
 
 function downRight(pSideM, pColorChoice1, pColorChoice2, pSymbol){
 var sideM ="";
-for (i=spSdeM;i > 0;i--){
+for (i=sideM;i > 0;i--){
 sideM +="<p>";
 //Create each line on the Rhombus
 for(j=0;j<i;j++){
