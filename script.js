@@ -8,18 +8,10 @@ var pColorChoice1 = document.getElementById('colorChoice1').value;
 var pColorChoice2 = document.getElementById('colorChoice2').value;
 var pSymbol = document.getElementById('symbol').value;
 
-
-function createRhombus(pSideM, pColorChoice1, pColorChoice2, pSymbol) {
+create.onclick = function createRhombus(pSideM, pColorChoice1, pColorChoice2, pSymbol) {
 upRight(pSideM, pColorChoice1, pColorChoice2, pSymbol);
 downRight(pSideM, pColorChoice1, pColorChoice2, pSymbol);
 }
-
-
-create.onclick = createRhombus(document.getElementById('sideM').value,
-    document.getElementById('colorChoice1').value,
-    document.getElementById('colorChoice2').value,
-    document.getElementById('symbol').value);
-
 
 function upRight(pSideM, pColorChoice1, pColorChoice2, pSymbol){
 var sideM ="";
