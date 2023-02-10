@@ -9,22 +9,21 @@ var pColorChoice2 = document.getElementById('colorChoice2').value;
 var pSymbol = document.getElementById('symbol').value;
 
 function upRight(pSideM, pColorChoice1, pColorChoice2, pSymbol){
-var sideM ="";
+var sideM = document.createElement("p");
+sideM.textContent = "";
 for (i=0;i<pSideM;i++){
-sideM +="<p>";
 //Create each line on the Rhombus
 for(j=0;j<=i;j++){
 
 //Is the position even or odd so we change the color
 if (j%2)
 //even
-sideM +="<span style='color:" + pColorChoice1 + ";'>" + pSymbol +"</span>";
+sideM.innerHTML +="<span style='color:" + pColorChoice1 + ";'>" + pSymbol +"</span>";
 else
 //odd
-sideM +="<span style='color:" + pColorChoice2 + ";'>" + pSymbol +"</span>";
+sideM.innerHTML +="<span style='color:" + pColorChoice2 + ";'>" + pSymbol +"</span>";
 
 }
-sideM +="</p>";
 console.log(sideM);
 
 }
@@ -37,17 +36,18 @@ uR.appendChild(sideM);
 function downRight(pSideM, pColorChoice1, pColorChoice2, pSymbol){
 var sideM ="";
 for (i=sideM;i > 0;i--){
-sideM +="<p>";
+sideM = document.createElement("p"); 
+sideM.textContent = "";
 //Create each line on the Rhombus
 for(j=0;j<i;j++){
 
 //Is the position even or odd so we change the color
 if (j%2)
 //even
-sideM +="<span style='color:" + pColorChoice1 + ";'>" + pSymbol +"</span>";
+sideM.innerHTML +="<span style='color:" + pColorChoice1 + ";'>" + pSymbol +"</span>";
 else
 //odd
-sideM +="<span style='color:" + pColorChoice2 + ";'>" + pSymbol +"</span>";
+sideM.innerHTML +="<span style='color:" + pColorChoice2 + ";'>" + pSymbol +"</span>";
 
 }
 sideM +="</p>";
