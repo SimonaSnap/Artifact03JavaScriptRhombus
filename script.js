@@ -34,7 +34,9 @@ sideM +="</p>";
 
 }
 
-document.getElementById("upRight").innerHTML = sideM;
+var uR = document.getElementById("upRight").innerHTML
+uR.appendChild(sideM);
+
 }
 
 function downRight(pSideM, pColorChoice1, pColorChoice2, pSymbol){
@@ -58,5 +60,7 @@ sideM +="</p>";
 
 }
 
-document.getElementById("downRight").innerHTML = sideM;
+
+var dR = document.getElementById("upRight").innerHTML
+dR.appendChild(sideM);
 }
