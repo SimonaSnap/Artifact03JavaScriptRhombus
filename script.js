@@ -30,7 +30,7 @@ sideM +="<span style='color:" + pColorChoice2 + ";'>" + pSymbol +"</span>";
 
 }
 sideM +="</p>";
-// console.log(sideM);
+console.log(sideM);
 
 }
 
@@ -56,7 +56,7 @@ sideM +="<span style='color:" + pColorChoice2 + ";'>" + pSymbol +"</span>";
 
 }
 sideM +="</p>";
-// console.log(sideM);
+console.log(sideM);
 
 }
 
