@@ -22,7 +22,7 @@ function upRight(pSideM, pColorChoice1, pColorChoice2, pSymbol){
                 sideM.style.color = pColorChoice2;
                 sideM.textContent = pSymbol;
             }
-            //console.log(sideM);
+            console.log(sideM);
         }
         var uR = document.getElementById("upRight")
         uR.append(sideM);
@@ -45,7 +45,7 @@ function downRight(pSideM, pColorChoice1, pColorChoice2, pSymbol){
                 sideM.style.color = pColorChoice2;
                 sideM.textContent = pSymbol
             }
-            //console.log(sideM);
+            console.log(sideM);
         }
         var dR = document.getElementById("downRight");
         dR.append(sideM);
@@ -55,7 +55,7 @@ function downRight(pSideM, pColorChoice1, pColorChoice2, pSymbol){
 }
 
 create.onclick = function createRhombus(pSideM, pColorChoice1, pColorChoice2, pSymbol) {
-console.log("clicked");
+//console.log("clicked");
 upRight(pSideM, pColorChoice1, pColorChoice2, pSymbol);
 downRight(pSideM, pColorChoice1, pColorChoice2, pSymbol);
 }
