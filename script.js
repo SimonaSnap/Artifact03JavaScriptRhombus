@@ -7,6 +7,10 @@ var pSideM = document.getElementById('sideM').value;
 var pColorChoice1 = document.getElementById('colorChoice1').value;
 var pColorChoice2 = document.getElementById('colorChoice2').value;
 var pSymbol = document.getElementById('symbol').value;
+var uR = document.getElementById("upRight")
+var dL = document.getElementById("downLeft");
+var dR = document.getElementById("downRight");
+var uL = document.getElementById("upLeft");
 
 create.onclick = function createRhombus(pSideM, pColorChoice1, pColorChoice2, pSymbol) {
     //console.log("clicked");
@@ -16,8 +20,6 @@ create.onclick = function createRhombus(pSideM, pColorChoice1, pColorChoice2, pS
 
 function upRight(pSideM, pColorChoice1, pColorChoice2, pSymbol){
     var sideM = document.createElement("span");
-    var uR = document.getElementById("upRight")
-    var dL = document.getElementById("downLeft");
     console.log(sideM);
     for (i=0; i<pSideM; i++) {
         if(i%2 == 0){
@@ -38,8 +40,7 @@ function upRight(pSideM, pColorChoice1, pColorChoice2, pSymbol){
 
 function downRight(pSideM, pColorChoice1, pColorChoice2, pSymbol){
     var sideM = document.createElement("span"); 
-    var dR = document.getElementById("downRight");
-    var uL = document.getElementById("upLeft");
+    
     for (i=0; i<pSideM; i++) {
         if(i%2 == 0){
             sideM.style.backgroundColor = pColorChoice1;
