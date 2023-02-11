@@ -16,6 +16,9 @@ create.onclick = function createRhombus(pSideM, pColorChoice1, pColorChoice2, pS
 
 function upRight(pSideM, pColorChoice1, pColorChoice2, pSymbol){
     var sideM = document.createElement("span");
+    var uR = document.getElementById("upRight")
+    var dL = document.getElementById("downLeft");
+    console.log(sideM);
     for (i=0;i<pSideM;i++){
         //Create each line on the Rhombus
         for(j=0;j<=i;j++){
@@ -30,15 +33,15 @@ function upRight(pSideM, pColorChoice1, pColorChoice2, pSymbol){
             }
             console.log(sideM);
         }
-        var uR = document.getElementById("upRight")
         uR.append(sideM);
-        var dL = document.getElementById("downLeft");
         dL.append(sideM);
     }
 }
 
 function downRight(pSideM, pColorChoice1, pColorChoice2, pSymbol){
     var sideM = document.createElement("span"); 
+    var dR = document.getElementById("downRight");
+    var uL = document.getElementById("upLeft");
     for (i=pSideM;i > 0;i--){
         //Create each line on the Rhombus
         for(j=0;j<i;j++){
@@ -53,9 +56,8 @@ function downRight(pSideM, pColorChoice1, pColorChoice2, pSymbol){
             }
             console.log(sideM);
         }
-        var dR = document.getElementById("downRight");
+        
         dR.append(sideM);
-        var uL = document.getElementById("upLeft");
         uL.append(sideM);
     }
 }
