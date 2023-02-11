@@ -21,7 +21,7 @@ create.onclick = function createRhombus(pSideM, pColorChoice1, pColorChoice2, pS
 function upRight(pSideM, pColorChoice1, pColorChoice2, pSymbol){
     var sideM = document.createElement("span");
     console.log(sideM);
-    for (i=0; i<pSideM; i++) {
+    for (let i=0; i<pSideM; i++) {
         if(i%2 == 0){
             sideM.style.backgroundColor = pColorChoice1;
             sideM.textContent = pSymbol;
@@ -41,7 +41,7 @@ function upRight(pSideM, pColorChoice1, pColorChoice2, pSymbol){
 function downRight(pSideM, pColorChoice1, pColorChoice2, pSymbol){
     var sideM = document.createElement("span"); 
     
-    for (i=0; i<pSideM; i++) {
+    for (let i=0; i<pSideM; i++) {
         if(i%2 == 0){
             sideM.style.backgroundColor = pColorChoice1;
             sideM.textContent = pSymbol;
