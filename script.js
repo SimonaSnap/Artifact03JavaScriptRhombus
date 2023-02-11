@@ -16,9 +16,10 @@ function upRight(pSideM, pColorChoice1, pColorChoice2, pSymbol){
     var sideM = document.createElement("span");
     console.log(sideM);
     for (let i=0; i<pSideM; i++) {
+        sideM.style.backgroundColor = pColorChoice1;
+        sideM.textContent = pSymbol;
+        console.log(sideM);
         if(i%2 == 0){
-            sideM.style.backgroundColor = pColorChoice1;
-            sideM.textContent = pSymbol;
         }
         else {
             sideM.style.backgroundColor = pColorChoice2;
