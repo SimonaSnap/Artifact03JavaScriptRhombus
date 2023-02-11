@@ -13,11 +13,13 @@ var dR = document.getElementById("downRight");
 var uL = document.getElementById("upLeft");
 
 function upRight(pSideM, pColorChoice1, pColorChoice2, pSymbol){
-    var sideM = document.createElement("span");
+    var sideM = document.createElement("p");
     console.log(sideM);
     for (let i=0; i<=pSideM; i++) {
-        sideM.style.backgroundColor = pColorChoice1;
-        sideM.textContent = pSymbol;
+        var innards = document.createElement("span");
+        innards.style.backgroundColor = pColorChoice1;
+        innards.textContent = pSymbol;
+        sideM.appendChild(innards);
         console.log(sideM);
         if(i%2 == 0){
             sideM.style.backgroundColor = pColorChoice1;
