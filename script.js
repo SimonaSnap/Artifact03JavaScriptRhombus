@@ -28,8 +28,8 @@ function upRight(pSideM, pColorChoice1, pColorChoice2, pSymbol){
             sideM.style.backgroundColor = pColorChoice2;
             sideM.textContent = pSymbol;
         }
-        uR.append(sideM);
-        dL.append(sideM);
+        uR.appendChild(sideM);
+        dL.appendChild(sideM);
     }
 }
 
@@ -46,8 +46,8 @@ function downRight(pSideM, pColorChoice1, pColorChoice2, pSymbol){
             sideM.style.backgroundColor = pColorChoice2;
             sideM.textContent = pSymbol;
         }
-        dR.append(sideM);
-        uL.append(sideM);
+        dR.appendChild(sideM);
+        uL.appendChild(sideM);
     }
 }
 
