@@ -15,8 +15,13 @@ var uL = document.getElementById("upLeft");
 function upRight(pSideM, pColorChoice1, pColorChoice2, pSymbol){
     var sideM = document.createElement("p");
     console.log(sideM);
+    var innards = document.createElement("span");
+        innards.style.backgroundColor = pColorChoice1;
+        innards.textContent = pSymbol;
+        sideM.appendChild(innards);
+        console.log(sideM);
     for (let i=0; i<=pSideM; i++) {
-        var innards = document.createElement("span");
+        //var innards = document.createElement("span");
         innards.style.backgroundColor = pColorChoice1;
         innards.textContent = pSymbol;
         sideM.appendChild(innards);
