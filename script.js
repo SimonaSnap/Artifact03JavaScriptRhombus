@@ -1,65 +1,53 @@
-var body = document.body;
-var create = document.createElement("button")
-create.textContent = "Create Rhombus"
-body.appendChild(create);
-
-var pSideM = document.getElementById('sideM').value;
-var pColorChoice1 = document.getElementById('colorChoice1').value;
-var pColorChoice2 = document.getElementById('colorChoice2').value;
-var pSymbol = document.getElementById('symbol').value;
-var uR = document.getElementById("upRight")
-var dL = document.getElementById("downLeft");
-var dR = document.getElementById("downRight");
-var uL = document.getElementById("upLeft");
-
-function upRight(pSideM, pColorChoice1, pColorChoice2, pSymbol){
-    var sideM = document.createElement("p");
-    console.log(sideM);
-    var innards = document.createElement("span");
-        innards.style.backgroundColor = pColorChoice1;
-        innards.textContent = pSymbol;
-        sideM.appendChild(innards);
-        console.log(sideM);
-    for (let i=0; i<=pSideM; i++) {
-        //var innards = document.createElement("span");
-        innards.style.backgroundColor = pColorChoice1;
-        innards.textContent = pSymbol;
-        sideM.appendChild(innards);
-        console.log(sideM);
-        if(i%2 == 0){
-            sideM.style.backgroundColor = pColorChoice1;
-            sideM.textContent = pSymbol;
-        }
-        else {
-            sideM.style.backgroundColor = pColorChoice2;
-            sideM.textContent = pSymbol;
-            console.log(sideM);
-        }
-        uR.appendChild(sideM);
-        dL.appendChild(sideM);
-    }
-}
-
-function downRight(pSideM, pColorChoice1, pColorChoice2, pSymbol){
-    var sideM = document.createElement("span"); 
+function createRhombus(pHeight, pColorEven, pColorOdd, pSymbol) {
+    upRight(pHeight, pColorEven, pColorOdd, pSymbol);
+    downRight(pHeight, pColorEven, pColorOdd, pSymbol);
     
-    for (let i=0; i<=pSideM; i++) {
-        if(i%2 == 0){
-            sideM.style.backgroundColor = pColorChoice1;
-            sideM.textContent = pSymbol;
-            
-        }
-        else {
-            sideM.style.backgroundColor = pColorChoice2;
-            sideM.textContent = pSymbol;
-        }
-        dR.appendChild(sideM);
-        uL.appendChild(sideM);
     }
-}
-
-create.onclick = function createRhombus(pSideM, pColorChoice1, pColorChoice2, pSymbol) {
-    //console.log("clicked");
-    upRight(pSideM, pColorChoice1, pColorChoice2, pSymbol);
-    downRight(pSideM, pColorChoice1, pColorChoice2, pSymbol);   
-}
+    
+    function upRight(pHeight, pColorEven, pColorOdd, pSymbol){
+    var rLine ="";
+    for (i=0;i<pHeight;i++){
+    rLine +="<p>";
+    //Create each line on the Rhombus
+    for(j=0;j<=i;j++){
+    
+    //Is the position even or odd so we change the color
+    if (j%2)
+    //even
+    rLine +="<span style='color:" + pColorEven + ";'>" + pSymbol +"</span>";
+    else
+    //odd
+    rLine +="<span style='color:" + pColorOdd + ";'>" + pSymbol +"</span>";
+    
+    }
+    rLine +="</p>";
+    // console.log(rLine);
+    
+    }
+    
+    document.getElementById("upRight").innerHTML = rLine;
+    }
+    
+    function downRight(pHeight, pColorEven, pColorOdd, pSymbol){
+    var rLine ="";
+    for (i=pHeight;i > 0;i--){
+    rLine +="<p>";
+    //Create each line on the Rhombus
+    for(j=0;j<i;j++){
+    
+    //Is the position even or odd so we change the color
+    if (j%2)
+    //even
+    rLine +="<span style='color:" + pColorEven + ";'>" + pSymbol +"</span>";
+    else
+    //odd
+    rLine +="<span style='color:" + pColorOdd + ";'>" + pSymbol +"</span>";
+    
+    }
+    rLine +="</p>";
+    // console.log(rLine);
+    
+    }
+    
+    document.getElementById("downRight").innerHTML = rLine;
+    }
