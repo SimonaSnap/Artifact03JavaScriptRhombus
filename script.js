@@ -1,53 +1,38 @@
-function createRhombus(pHeight, pColorEven, pColorOdd, pSymbol) {
-    upRight(pHeight, pColorEven, pColorOdd, pSymbol);
-    downRight(pHeight, pColorEven, pColorOdd, pSymbol);
+function createRhombus(heightValue, firstColor, secondColor, symbolValue) {
+    upRight(heightValue, firstColor, secondColor, symbolValue);
+    downRight(heightValue, firstColor, secondColor, symbolValue);
+}
     
-    }
-    
-    function upRight(pHeight, pColorEven, pColorOdd, pSymbol){
+function upRight(heightValue, firstColor, secondColor, symbolValue){
     var rLine ="";
-    for (i=0;i<pHeight;i++){
-    rLine +="<p>";
-    //Create each line on the Rhombus
-    for(j=0;j<=i;j++){
-    
-    //Is the position even or odd so we change the color
-    if (j%2)
-    //even
-    rLine +="<span style='color:" + pColorEven + ";'>" + pSymbol +"</span>";
-    else
-    //odd
-    rLine +="<span style='color:" + pColorOdd + ";'>" + pSymbol +"</span>";
-    
+    for (i=0; i<heightValue; i++){
+        rLine +="<p>";
+        for(j=0;j<=i;j++){
+            if (j%2) {
+                rLine +="<span style='color:" + firstColor + ";'>" + symbolValue +"</span>";
+            }
+            else {
+                rLine +="<span style='color:" + secondColor + ";'>" + symbolValue +"</span>";
+            }
+        }
+        rLine +="</p>";
     }
-    rLine +="</p>";
-    // console.log(rLine);
-    
-    }
-    
     document.getElementById("upRight").innerHTML = rLine;
-    }
+}
     
-    function downRight(pHeight, pColorEven, pColorOdd, pSymbol){
+function downRight(heightValue, firstColor, secondColor, symbolValue){
     var rLine ="";
-    for (i=pHeight;i > 0;i--){
-    rLine +="<p>";
-    //Create each line on the Rhombus
-    for(j=0;j<i;j++){
-    
-    //Is the position even or odd so we change the color
-    if (j%2)
-    //even
-    rLine +="<span style='color:" + pColorEven + ";'>" + pSymbol +"</span>";
-    else
-    //odd
-    rLine +="<span style='color:" + pColorOdd + ";'>" + pSymbol +"</span>";
-    
+    for (i=heightValue;i > 0;i--){
+        rLine +="<p>";
+        for(j=0;j<i;j++){
+            if (j%2) {
+                rLine +="<span style='color:" + firstColor + ";'>" + symbolValue +"</span>";
+            }
+            else {
+                rLine +="<span style='color:" + secondColor + ";'>" + symbolValue +"</span>";
+            }
+        }
+        rLine +="</p>"; 
     }
-    rLine +="</p>";
-    // console.log(rLine);
-    
-    }
-    
     document.getElementById("downRight").innerHTML = rLine;
-    }
+}
